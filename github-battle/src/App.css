@@ -1,0 +1,376 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.svgLoader {
+  -webkit-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
+  margin: auto;
+}
+
+.divLoader {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fw {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-30 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 28%;
+          flex: 0 1 28%;
+  margin: 1%;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.sec-padding {
+  padding: 2rem 0;
+}
+
+header {
+  padding: 2rem 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header a {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.active-header-nav {
+  color: #bb2e1f;
+}
+
+.popular-sec .heading-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.popular-sec .heading-ul li {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.single-Article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+  margin: 1%;
+  background-color: #ebebeb;
+  padding: 1rem;
+}
+
+.single-Article > * {
+  margin-bottom: 2rem;
+}
+
+.single-Article h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.single-Article .img-div {
+  height: 10rem;
+  max-width: 10rem;
+  margin: 0 auto;
+}
+
+.single-Article .img-div img {
+  height: 100%;
+  width: 100%;
+}
+
+.single-Article h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #bb2e1f;
+}
+
+.single-Article li {
+  margin-bottom: 1rem;
+}
+
+.single-Article li span {
+  vertical-align: baseline;
+}
+
+.single-Article li svg {
+  margin-right: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.single-Article li .bi-person-fill {
+  color: #ffbf74;
+}
+
+.single-Article li .bi-star-fill {
+  color: #ffd700;
+}
+
+.single-Article li .bi-github {
+  color: #95caf3;
+}
+
+.single-Article li .bi-exclamation-triangle-fill {
+  color: #f18a93;
+}
+
+.battle-sec h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.battle-sec .flex-30 {
+  background-color: #ebebeb;
+  padding: 1rem;
+}
+
+.battle-sec .flex-30 > * {
+  margin-bottom: 1rem;
+}
+
+.battle-sec .flex-30 h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.battle-sec .flex-30 svg {
+  height: 7rem;
+  width: 7rem;
+  background-color: #ebebeb;
+}
+
+.battle-sec .flex-30 .bi-people-fill {
+  color: #ffbf74;
+}
+
+.battle-sec .flex-30 .bi-x-octagon-fill {
+  color: #727272;
+}
+
+.battle-sec .flex-30 .bi-award {
+  color: #ffd700;
+}
+/*# sourceMappingURL=App.css.map */
