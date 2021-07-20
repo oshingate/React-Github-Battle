@@ -8,7 +8,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <header>
+      <header style={{ backgroundColor: this.props.background }}>
         <div className='container'>
           <div>
             <NavLink to='/popular' activeClassName='active-header-nav'>
@@ -19,6 +19,7 @@ class Header extends Component {
             </NavLink>
           </div>
           <svg
+            onClick={this.props.handleBackground}
             xmlns='http://www.w3.org/2000/svg'
             width='16'
             height='16'

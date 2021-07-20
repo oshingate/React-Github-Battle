@@ -7,33 +7,30 @@ class PopularDiv extends Component {
     super(props);
     this.state = {
       arrayOfData: null,
-    
     };
   }
 
   componentDidMount() {
     let lang = this.props.match.params.lang;
-    console.log('conponent will mount');
+    console.log('component will mount');
 
     fetch(
       `https://api.github.com/search/repositories?q=stars:%3E1+language:${lang}&sort=stars&order=desc&type=Repositories`
     )
       .then((res) => res.json())
-      .then((data) =>
-        this.setState({ arrayOfData: data.items, })
-      );
+      .then((data) => this.setState({ arrayOfData: data.items }));
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // let lang = this.props.match.params.lang;
+    let lang = this.props.match.params.lang;
     console.log('conponent will update');
-    // fetch(
-    //   `https://api.github.com/search/repositories?q=stars:%3E1+language:${lang}&sort=stars&order=desc&type=Repositories`
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) =>
-    //     this.setState({ arrayOfData: data.items, })
-    //   );
+    if (prevProps.match.params.lang !== this.props.match.params.lang) {
+      fetch(
+        `https://api.github.com/search/repositories?q=stars:%3E1+language:${lang}&sort=stars&order=desc&type=Repositories`
+      )
+        .then((res) => res.json())
+        .then((data) => this.setState({ arrayOfData: data.items }));
+    }
   }
 
   componentWillUnmount() {

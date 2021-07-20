@@ -7,13 +7,24 @@ import Popular from './Popular';
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      background: 'white',
+    };
   }
+
+  handleBackground = () => {
+    this.setState({
+      background: this.state.background === 'white' ? '#1C2022' : 'white',
+    });
+  };
   render() {
     return (
       <>
-        <Header />
-        <main>
+        <Header
+          handleBackground={this.handleBackground}
+          background={this.state.background}
+        />
+        <main style={{ backgroundColor: this.state.background }}>
           <Route path='/popular'>
             <Popular />
           </Route>

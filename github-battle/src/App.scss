@@ -129,25 +129,6 @@ table {
 }
 //loader
 
-.svgLoader {
-  animation: spin 0.5s linear infinite;
-  margin: auto;
-}
-.divLoader {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 //our css
 $pri: #bb2e1f;
 $sec: #ebebeb;
@@ -163,6 +144,9 @@ body {
 .flex {
   display: flex;
 }
+.jsb {
+  justify-content: space-between;
+}
 .fw {
   flex-wrap: wrap;
 }
@@ -172,6 +156,14 @@ body {
 }
 .flex-30 {
   flex: 0 1 28%;
+  margin: 1%;
+}
+.flex-40 {
+  flex: 0 1 28%;
+  margin: 1%;
+}
+.flex-50 {
+  flex: 0 1 48%;
   margin: 1%;
 }
 .text-bold {
@@ -291,7 +283,6 @@ header {
     margin: 2rem 0;
   }
   .flex-30 {
-    background-color: $sec;
     padding: 1rem;
     & > * {
       margin-bottom: 1rem;
@@ -315,6 +306,127 @@ header {
     }
     .bi-award {
       color: #ffd700;
+    }
+  }
+}
+
+.battle-div {
+  input {
+    width: 60%;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
+    &::placeholder {
+      font-size: 1rem;
+      padding-left: 1rem;
+    }
+  }
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+  }
+  .active {
+    background-color: rgb(5, 104, 18);
+    color: white;
+  }
+  h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $pri;
+  }
+}
+
+.battle-btn-div {
+  padding: 3rem 0;
+  button {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: $pri;
+    color: white;
+  }
+}
+.battle-Home-card {
+  padding: 1rem;
+  background-color: $sec;
+  border: 1px solid gray;
+}
+.battle-Home-img-div {
+  height: 4rem;
+  width: 4rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+//battle-result-sec
+
+.battle-result-sec {
+  h2 {
+    font-size: 3rem;
+    font-weight: 800px;
+    text-align: center;
+  }
+}
+.result-div {
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+.result-card {
+  padding: 1rem;
+  background-color: $sec;
+  border-radius: 10px;
+  & > * {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    color: $pri;
+    text-align: center;
+  }
+  .img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 10px;
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: $pri;
+  }
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  ul {
+    & > * {
+      margin-bottom: 0.5rem;
+    }
+    padding: 1rem;
+    li {
+      svg {
+        margin-right: 1rem;
+        height: 2rem;
+        width: 2rem;
+      }
+      span {
+        font-size: 1rem;
+      }
     }
   }
 }
